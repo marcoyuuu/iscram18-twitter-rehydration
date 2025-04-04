@@ -1,23 +1,23 @@
 @echo off
-REM Cambia al directorio del proyecto (opcional si ya estás ahí)
+REM Change to the project directory (optional if already there)
 cd /d "%~dp0"
 
-REM Crear entorno virtual si no existe
+REM Create virtual environment if it does not exist
 if not exist ".venv\Scripts\activate" (
-    echo Creando entorno virtual con Python 3.11...
+    echo Creating virtual environment with Python 3.11...
     py -3.11 -m venv .venv
 )
 
-REM Activar el entorno virtual
+REM Activate the virtual environment
 call .venv\Scripts\activate
 
-REM Actualizar pip
+REM Upgrade pip
 pip install --upgrade pip
 
-REM Instalar dependencias
+REM Install dependencies
 pip install -r requirements.txt
 
-REM Ejecutar el script de hidratación
-python hydrate_maria.py
+REM Execute the hydration script
+python hydrate_twikit.py
 
 pause

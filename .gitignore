@@ -1,2 +1,15 @@
-/.env
-/.venv
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environment directory
+.venv/
+
+# Sensitive configuration and credential files
+config.ini
+cookies.json
+fail_log_verbose.txt
+
+# Output files
+hydrated_tweets.csv
+failed_ids.txt
